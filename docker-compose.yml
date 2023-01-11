@@ -1,0 +1,40 @@
+version: "3.1"
+
+services:
+  auth-server:
+    container_name: auth-server
+    build:
+      context: authorization-server
+      dockerfile: Dockerfile
+
+  car-server:
+    container_name: car-server
+    build:
+      context: resource-server
+      dockerfile: Dockerfile
+    environment:
+      - "SPRING_PROFILES_ACTIVE=car"
+
+  bike-server:
+    container_name: bike-server
+    build:
+      context: resource-server
+      dockerfile: Dockerfile
+    environment:
+      - "SPRING_PROFILES_ACTIVE=bike"
+
+  speed-server:
+    container_name: speed-server
+    build:
+      context: resource-server
+      dockerfile: Dockerfile
+    environment:
+      - "SPRING_PROFILES_ACTIVE=speed"
+
+  client-app:
+    container_name: client-app
+    build:
+      context: client-app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"

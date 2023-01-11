@@ -1,0 +1,39 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+
+---
+spring:
+  config:
+    activate:
+      on-profile: car
+
+server:
+  port: 8090
+
+---
+spring:
+  config:
+    activate:
+      on-profile: bike
+
+server:
+  port: 8091
+
+---
+spring:
+  config:
+    activate:
+      on-profile: speed
+
+server:
+  port: 8092

@@ -1,0 +1,38 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          client-v1:
+            provider: local
+            client-id: messaging-client1
+            client-secret: secret1
+            authorization-grant-type: client_credentials
+            scope: message.read
+          client-v2:
+            provider: local
+            client-id: messaging-client2
+            client-secret: secret2
+            authorization-grant-type: client_credentials
+            scope: message.read
+          client-v3:
+            provider: local
+            client-id: messaging-client3
+            client-secret: secret3
+            authorization-grant-type: client_credentials
+            scope: message.read
+          client-v4:
+            provider: local
+            client-id: messaging-client4
+            client-secret: secret4
+            authorization-grant-type: client_credentials
+            scope: message.read
+          client-v5:
+            provider: local
+            client-id: messaging-client5
+            client-secret: secret5
+            authorization-grant-type: client_credentials
+            scope: message.read
+        provider:
+          local:
+            token-uri: http://auth-server:9000/oauth2/token
