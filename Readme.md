@@ -1,5 +1,7 @@
 # Getting Started
 
+**NOT UPDATED TO SPRINGBOOT 3**
+
 ## Docker
 
 Run **docker-compose up --build** to build and run the full system. As the project compilation
