@@ -1,6 +1,6 @@
 # Getting Started
 
-**NOT UPDATED TO SPRINGBOOT 3**
+**UPDATED TO SPRINGBOOT 3**
 
 ## Docker
 
